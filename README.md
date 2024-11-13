@@ -3,7 +3,9 @@
 This project is a basic template to help you get started with Vue 3 development using Vite. It includes all the essentials for Vue 3 setup with Vite's fast build system, ready for development and production.
 
 ->Vue Router for Page Navigation (SPA)
+
 ->Pinia for state management between components/pages
+
 ->Vite for easy building
 
 ## Requirements
