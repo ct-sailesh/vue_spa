@@ -1,13 +1,19 @@
-import { defineStore } from 'pinia';
+// src/lib/store.js
+import { defineStore } from 'pinia'
+import { ref } from 'vue'
 
-export const useMainStore = defineStore('main', {
-  state: () => ({
-    returnedId: null, // Initial value for returnedId
-  }),
-  actions: {
-    setReturnedId(id) {
-        alert(id);
-      this.returnedId = id; // Set the value of returnedId
-    },
-  },
-});
+export const useCounterStore = defineStore('counter', () => {
+  const count = ref(Number(localStorage.getItem('counter')) || 0)
+
+  function increment() {
+    count.value++
+    localStorage.setItem('counter', count.value)
+  }
+
+  function decrement() {
+    count.value--
+    localStorage.setItem('counter', count.value)
+  }
+
+  return { count, increment, decrement }
+})

@@ -3,8 +3,15 @@
   
         <br>
     
-        <h1>Welcome to Home Page {{returnedId}}</h1>
+        <h1>Welcome to Home Page </h1>
         <button @click="makePostRequest">Submit Data</button>
+        <p>Post Received ID: {{returnedId}}</p>
+        
+        <p>Count: {{counterStore.count}}</p>
+
+        <button @click="counterStore.increment">Increment</button>
+        <button @click="counterStore.decrement">Decrement</button>
+
     
     <Footer />
 </div>
