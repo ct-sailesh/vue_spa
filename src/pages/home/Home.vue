@@ -19,6 +19,7 @@ export default {
 
   data() {
     return {
+      appname: this.$env.VITE_APP_NAME,
       postData: {
         key: 'value',
       },
@@ -33,9 +34,9 @@ export default {
       try {
         const response = await postReq('/products', this.postData); 
         console.log('POST request successful:', response.id);
-        this.returnedId = response.id;
+        this.returnedId = responsse.id;
       } catch (error) {
-        console.error('POST request failed:', error);
+        throw error;
       }
     },
 

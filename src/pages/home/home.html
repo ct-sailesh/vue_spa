@@ -3,7 +3,7 @@
   
         <br>
     
-        <h1>Welcome to Home Page </h1>
+        <h1>Welcome to Home Page {{ $env.VITE_APP_NAME }}</h1>
         <button @click="makePostRequest">Submit Data</button>
         <p>Post Received ID: {{returnedId}}</p>
         
